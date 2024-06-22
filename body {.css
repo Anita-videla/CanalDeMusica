@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    margin: 0;
+    height: 100vh; /* Esto hace que el cuerpo ocupe toda la altura de la ventana */
+    display: flex; /* Utilizar Flexbox en el body */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Alinear los elementos dentro del contenedor en columna */
+    align-items: center; /* Alinear los elementos dentro del contenedor en el centro */
+}
+
+header, .form, .registro-list {
+    margin-bottom: 20px;
+    width: 100%; /* Hacer que estos elementos ocupen el 100% del ancho del contenedor */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7e5f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+li button:hover {
+    color: red;
+}
+
+.view-records, .back-to-form {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ff7e5f;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.view-records:hover, .back-to-form:hover {
+    background-color: #feb47b;
+}

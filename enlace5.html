@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+    <head> <!--aca van los datos que no se ven en la pagina-->
+        <meta charset="utf_8" /> 
+        <title> SUSCRIBITE </title> <!--nombre de la pestaña-->
+        <link rel="stylesheet" href="styles.css" /> <!-- buscar los estilos de pagina-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" /> <!-- buscar los estilos de pagina-->
+        <script src="https://kit.fontawesome.com/7ed3d05022.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body><!--aca va la estructura de lo que se ve-->  
+       
+        <div id="container"> <!--identificador para colocar los estilos de css -->
+          
+            <header>
+              <h1> SOUNDMAP </h1><!--encabezado-->
+           </header>
+
+           <nav><!--link de navegacion-->
+            <a href="index.html"> INICIO </a>
+            <a href="enlace1.html"> BANDAS </a>
+            <a href="enlace2.html"> SOLISTAS </a>
+            <a href="enlace3.html"> CONCIERTOS </a>
+            
+            </nav>
+
+
+
+           <div class="clearfix"></div> <!--separacion entre los contenidos-->
+
+           <form id="formulario">
+            <h2>Formulario de Registro</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Registrarse">
+        </form>
+        <section id="registro">
+            <h2>Datos Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="datos-registro">
+                    <!-- Los datos del registro se mostrarán aquí -->
+                </tbody>
+            </table>
+        </section>
+    
+        <!-- Scripts para manejar el formulario y los datos del registro -->
+        <script>
+            // Función para manejar el envío del formulario
+            document.getElementById("formulario").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evitar que se recargue la página
+                var nombre = document.getElementById("nombre").value;
+                var email = document.getElementById("email").value;
+    
+                
+                // Simplemente para este ejemplo, mostraremos los datos en la tabla
+                var newRow = document.createElement("tr");
+                newRow.innerHTML = "<td>" + nombre + "</td><td>" + email + "</td>";
+                document.getElementById("datos-registro").appendChild(newRow);
+    
+            
+            });
+        </script>
+            
+
+            <div class="clearfix"></div>
+             
+            <footer><!--pie de pagina-->
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/" class="icono-facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" class="icono-twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" class="icono-instagram"><i class="fab fa-instagram"></i></a>
+                    RADIVIDELAPALMEIRO WEB&COPY2024
+                </div>
+            </footer>
+
+        </div>
+
+    </body>
